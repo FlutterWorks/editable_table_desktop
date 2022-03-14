@@ -123,7 +123,7 @@ class _RowBuilderState extends State<RowBuilder> {
               maxLines: widget.tdEditableMaxLines,
               inputFormatters: [
                 if (widget.useOnlyNumbers)
-                  FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
+                  FilteringTextInputFormatter.allow(RegExp(r'-?[0-9]{0,10}')),
               ],
               decoration: InputDecoration(
                 filled: widget.zebraStripe,
